@@ -1,0 +1,51 @@
+.btn-primary {
+    background-color: var(--green);
+    color: var(--white);
+
+    padding: 16px 24px;
+    text-decoration: none;
+    white-space: nowrap;
+
+    font-size: var(--fs-p);
+    font-family: var(--ff-body);
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--black);
+}
+
+.btn-secondary {
+    color: var(--black);
+    opacity: 0.75;
+
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    font-size: var(--fs-p);
+    font-family: var(--ff-body);
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+.btn-secondary svg {
+    transition: transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+    opacity: 1;
+}
+
+.btn-secondary:hover svg {
+    transform: translateX(3px);
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
