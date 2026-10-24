@@ -91,6 +91,7 @@ h3 {
 p {
     font-size: var(--fs-p);
     font-family: var(--ff-body);
+    font-weight: 400;
     color: var(--grey);
     margin: 0;
     line-height: 1.4;
@@ -127,7 +128,7 @@ ul {
     --fs-h1: clamp(2.2rem, 6vw, 2.95rem);
     --fs-h2: clamp(1.8rem, 4.5vw, 2rem);
     --fs-h3: clamp(1.155rem, 2.45vw, 1.35rem);
-    --fs-p: clamp(1rem, 2vw, 1.125rem);
+    --fs-p: clamp(1rem, 2vw, 1.1rem);
     --fs-li: clamp(0.9rem, 2vw, 1rem);
 
     --ff-heading: 'Playfair Display', serif;
@@ -248,6 +249,9 @@ ul {
 }
 
 #comparison {
+    min-height: auto;
+    padding-bottom: 75px;
+
     .container {
         .row-container {
             gap: 48px;
@@ -287,6 +291,9 @@ ul {
 }
 
 #faqs {
+    padding-bottom: 75px;
+    background-color: var(--bg-one);
+
     .faq-item {
         border-bottom: 1px solid #d1d1d1;
         margin-bottom: 1rem;
@@ -295,9 +302,9 @@ ul {
             width: 100%;
             background: none;
             border: none;
-            padding: 24px 0;
+            padding: 12px 0 24px 0;
             
-            font-size: var(--fs-h3);
+            font-size: var(--fs-p);
             font-family: var(--ff-heading);
             font-weight: 450;
             text-transform: uppercase;
@@ -310,6 +317,9 @@ ul {
             overflow: hidden;
             transition: max-height 0.35s ease-out, padding 0.35s ease-out;
             padding: 0;
+            text-align: center;
+
+            font-size: var(--fs-p);
 
             a {
                 color: inherit;
@@ -318,24 +328,39 @@ ul {
         }
 
         &.active .faq-answer {
+            display: block;
             max-height: 200px;
             padding-bottom: 1rem;
         }
+    }
+}
 
-        &.active .faq-answer {
-            display: block;
+#final {
+    background-color: #282828;
+    padding-bottom: 75px;
+
+    h2 {
+        color: var(--white);
+        padding-bottom: 20px;
+        font-weight: 500;
+    }
+    p {
+        color: #a1a1a1;
+        max-width: 45%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    a {
+        margin: 48px auto 0 auto;
+
+        &:hover {
+            filter: brightness(80%);
         }
     }
 }
 
 footer {
-    padding: 3rem 0 3rem 0;
-
-    font-size: 0.95rem;
-    font-family: var(--ff-heading);
-    letter-spacing: 5%;
-    
-    color: #777;
-    text-align: center;
-    text-transform: uppercase;
+    background-color: var(--black);
+    height: 400px;
 }
