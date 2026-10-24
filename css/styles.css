@@ -48,6 +48,10 @@ section:nth-child(3) {
     }
 }
 
+#selected .container {
+    max-width: 90%;
+}
+
 .row-container {
     display: flex;
     align-items: center;
@@ -78,8 +82,9 @@ h2 {
 h3 {
     font-size: var(--fs-h3);
     font-family: var(--ff-heading);
-    font-weight: 450;
+    font-weight: 350;
     color: var(--black);
+    text-transform: uppercase;
     margin: 0;
 }
 
@@ -121,7 +126,7 @@ ul {
 
     --fs-h1: clamp(2.2rem, 6vw, 2.95rem);
     --fs-h2: clamp(1.8rem, 4.5vw, 2rem);
-    --fs-h3: clamp(1.5rem, 3vw, 1.75rem);
+    --fs-h3: clamp(1.155rem, 2.45vw, 1.35rem);
     --fs-p: clamp(1rem, 2vw, 1.125rem);
     --fs-li: clamp(0.9rem, 2vw, 1rem);
 
@@ -152,7 +157,7 @@ ul {
         }
 
         p {
-            max-width: clamp(80%, 85vw, 90%);
+            max-width: clamp(65%, 67.5vw, 70%);
 
             a {
                 color: inherit;
@@ -188,11 +193,138 @@ ul {
         }
     }
 
-    .package-divider {
+    .card-divider {
         width: 1px;
         align-self: stretch;
         background-color: #d1d1d1;
         margin: 0 auto;
+    }
+}
+
+#selected {
+    min-height: auto;
+    padding-bottom: 75px;
+    
+    .container {
+        justify-content: flex-start;
+        margin-right: auto;
+
+        h2 {
+            margin-right: auto;
+            margin-left: 0;
+            max-width: 60%;
+            padding-bottom: 0;
+        }
+
+        .row-container {
+            align-items: center;
+            gap: 48px;
+
+            .selected-text {
+                display: flex;
+                flex-direction: column;
+                gap: 48px;
+                
+                .block {
+                    display: flex;
+                    flex-direction: column;
+
+                    &:last-child a {
+                        margin-top: 24px;
+                    }
+                }
+            }
+
+            .selected-image {
+                img {
+                    aspect-ratio: 16 / 9;
+                    max-width: 650px;
+                    border-radius: 4px;
+                    box-shadow: 3px 2px 25px color-mix(in srgb, var(--black) 20%, transparent);;
+                }
+            }
+        }
+    }
+}
+
+#comparison {
+    .container {
+        .row-container {
+            gap: 48px;
+            align-items: flex-start;
+
+            .comparison-card {
+                .comparison-header {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    span {
+                        font-size: clamp(0.7rem, 1vw, 0.95rem);
+                        font-family: var(--ff-body);
+                        font-weight: 550;
+
+                        color: var(--grey);
+                        opacity: 0.5;
+                        text-transform: uppercase;
+                        letter-spacing: -1%;
+                    }
+                }
+
+                .list-spacer {
+                    background-color: #d1d1d1;
+                    width: 100%;
+                    height: 1px;
+                }
+            }
+        }
+        .card-divider {
+            width: 1px;
+            align-self: stretch;
+            background-color: #d1d1d1;
+            margin: 0 auto;
+        }
+    }
+}
+
+#faqs {
+    .faq-item {
+        border-bottom: 1px solid #d1d1d1;
+        margin-bottom: 1rem;
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 24px 0;
+            
+            font-size: var(--fs-h3);
+            font-family: var(--ff-heading);
+            font-weight: 450;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .faq-answer {
+            max-height: 0;
+            max-width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            transition: max-height 0.35s ease-out, padding 0.35s ease-out;
+            padding: 0;
+
+            a {
+                color: inherit;
+                font-weight: 600;
+            }
+        }
+
+        &.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1rem;
+        }
+
+        &.active .faq-answer {
+            display: block;
+        }
     }
 }
 
