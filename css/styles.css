@@ -40,7 +40,7 @@ section:nth-child(3) {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    max-width: none;
+    max-width: 90%;
     margin: 0 auto;
 
     .row-container {
@@ -122,7 +122,6 @@ ul {
     --grey: #454545;
     --border: #4545454e;
     --white: #f9f9f9;
-
     --bg-one: #f1f1f1;
     --bg-two: #ececec;
     --green: #264737;
@@ -360,6 +359,7 @@ ul {
 #final {
     background-color: #282828;
     padding-bottom: 75px;
+    min-height: auto;
 
     h2 {
         color: var(--white);
@@ -381,6 +381,76 @@ ul {
         }
     }
 }
+
+/* ENDING OF INDEX.HTML CSS */
+/* BEGINNING OF PORTFOLIO.HTML CSS */
+
+#portfolio-page {
+    #tipsy, 
+    #cortile {
+        min-height: auto;
+        padding: 25px 0;
+
+        .row-container {
+            gap: 48px;
+        }
+
+        .project-text {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .section-header {
+                display: flex;
+                flex-direction: column;
+
+                h2 {
+                    padding-bottom: 0;
+                    padding-top: 0;
+                    margin: 0;
+                }
+            }
+            .project-details {
+                display: flex;
+                flex-direction: column;
+                max-width: none;
+                gap: 24px;
+
+                ul {
+                    gap: 6px;
+                    list-style-type: disc;
+                    padding-left: 48px;
+
+                    li {
+                        font-weight: 500;
+                        color: var(--black);
+                    }
+                }
+            }
+        }
+        .project-image img {
+            max-width: 550px;
+            border-radius: 4px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+        }
+    }
+    #cortile {
+        padding-bottom: 75px;
+    }
+    #final {
+        padding-bottom: 54px;
+        h2 {
+            max-width: 50%;
+            text-align: center;
+            padding-bottom: 12px;
+        }
+        p {
+            max-width: 60%;
+        }
+    }
+}
+
+/* BEGINNING OF UNIVERSAL FOOTER CSS */ 
 
 footer {
     background-color: var(--black);

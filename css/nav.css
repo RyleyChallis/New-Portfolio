@@ -23,10 +23,16 @@ nav {
         align-items: center;
         gap: 3rem;
         text-transform: uppercase;
+
         li {
             a {
                 text-decoration: none;
                 color: var(--grey);
+                transition: color 0.2s ease;
+
+                &:hover {
+                    color: var(--black);
+                }
             }
         }
     }
