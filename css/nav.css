@@ -1,0 +1,33 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+
+    width: 100%;
+    height: 15vh;
+    padding: 0 2.5%;
+    border-bottom: 1px solid var(--border);
+
+    .nav-logo {
+        font-size: var(--fs-p);
+        font-family: var(--ff-heading);
+        font-weight: 500;
+        color: var(--black);
+
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+        text-transform: uppercase;
+        li {
+            a {
+                text-decoration: none;
+                color: var(--grey);
+            }
+        }
+    }
+}
