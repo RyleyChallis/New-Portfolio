@@ -170,7 +170,10 @@ ul {
             display: flex;
             position: absolute;
             bottom: 5%;
-            gap: 4rem;
+            gap: clamp(1rem, 3vw, 3rem); 
+            width: 90%;
+            justify-content: center;
+            align-items: center;
 
             .stat-divider {
                 width: 1px;

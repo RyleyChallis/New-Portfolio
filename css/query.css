@@ -16,6 +16,15 @@
     }
 }
 
+@media (max-width: 768px) {
+    #hero {
+        & .hero-stats {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}
+
 @media (max-width: 605px) {
     .hero-actions {
         display: flex;
