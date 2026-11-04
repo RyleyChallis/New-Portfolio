@@ -145,6 +145,10 @@ img {
     --ff-body: 'Lato', sans-serif;
 }
 
+::selection {
+    background-color: var(--border);
+}
+
 #hero {
     display: flex;
     flex-direction: column;
@@ -350,7 +354,7 @@ img {
             font-weight: 450;
             text-transform: uppercase;
             cursor: pointer;
-            transition: background-color 0.2s ease;
+            transition: background-color 0.3s ease;
 
             &:hover {
                 background-color: #e0e0e0;
