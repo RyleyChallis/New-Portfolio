@@ -9,6 +9,7 @@
 
     display: flex;
     align-items: center;
+    user-select: none;
 
     font-size: var(--fs-btn);
     font-family: var(--ff-body);
@@ -54,6 +55,7 @@
     text-decoration: none;
     white-space: nowrap;
     max-width: fit-content;
+    user-select: none;
 
     font-size: var(--fs-btn);
     font-family: var(--ff-body);
@@ -74,4 +76,8 @@
 
 #final .btn-tertiary {
     border: none;
+
+    &:hover {
+        background-color: var(--grey);
+    }
 }

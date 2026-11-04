@@ -16,12 +16,18 @@
     <link rel="stylesheet" href="css/query.css">
 </head>
 <body>
+    <div id="sidebarOverlay"></div>
     <header>
         <div id="sidebar">
             <div class="sidebar-header">
                 <h3>Challis.</h3>
-                <p>&times;</p>
+                <button type="button" id="close-btn" aria-label="Close navigation menu">&times;</button>
             </div>
+            <ul class="sidebar-links">
+                <li><a href="">Process</a></li>
+                <li><a href="">Packages</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
         </div>
         <nav>
             <a class="nav-logo" href="#">Challis</a>
@@ -30,7 +36,7 @@
                 <li><a href="">Packages</a></li>
                 <li><a href="">Contact</a></li>
                 <li>
-                    <button type="button" id="open-btn" aria-label="Open navigation sidebar">&#9776;</button>
+                    <button type="button" id="open-btn" aria-label="Open navigation menu">&#9776;</button>
                 </li>
             </ul>
         </nav>
@@ -207,6 +213,7 @@
         <section id="faqs">
             <div class="container">
                 <h2>Frequently Asked Questions</h2>
+                <p class="subtitle">Didn't get the answer for which you were looking? We respond to all email inquiries within 48 hours.</p>
                 <div class="faq-container container">
                     <div class="faq-item">
                         <button class="faq-question" type="button">Why custom code over WordPress or Webflow?</button>

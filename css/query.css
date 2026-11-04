@@ -17,9 +17,17 @@
 }
 
 @media (max-width: 768px) {
-    #hero {
-        & .hero-stats {
+    nav {
+        padding-right: 5%;
+        .nav-links li a {
             display: none;
+        }
+        .nav-links li button {
+            display: block;
+        }
+    }
+    #hero {
+        .hero-stats {
             visibility: hidden;
         }
     }
