@@ -9,9 +9,9 @@ html, body {
     width: 100%;
 }
 
-body.no-scroll {
+body.no-scroll,
+html.no-scroll {
   overflow: hidden;
-  height: 100vh;
 }
 
 section {
@@ -420,8 +420,18 @@ img {
     }
 }
 
-/* ENDING OF INDEX.HTML CSS */
-/* BEGINNING OF PORTFOLIO.HTML CSS */
+#retainer-modal {
+    width: 70vw;
+    height: 70vh;
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.65);
+    }
+
+}
+
+/* INDEX.HTML END */
+/* PORTFOLIO.HTML START */
 
 #portfolio-page {
     #tipsy, 
