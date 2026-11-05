@@ -93,6 +93,15 @@ h3 {
     margin: 0;
 }
 
+h4 {
+    font-size: var(--fs-h4);
+    font-family: var(--ff-heading);
+    font-weight: 350;
+    color: var(--black);
+    text-transform: uppercase;
+    margin: 0;
+}
+
 p {
     font-size: var(--fs-p);
     font-family: var(--ff-body);
@@ -138,6 +147,7 @@ img {
     --fs-h1: clamp(2.2rem, 6vw, 2.95rem);
     --fs-h2: clamp(1.8rem, 4.5vw, 2rem);
     --fs-h3: clamp(1.155rem, 2.45vw, 1.35rem);
+    --fs-h4: clamp(1rem, 2.15vw, 1.15rem);
     --fs-p: clamp(0.8rem, 2vw, 0.9rem);
     --fs-btn: clamp(0.7rem, 1vw, 0.8rem);
 
@@ -211,6 +221,7 @@ img {
     .row-container {
         align-items: stretch;
         gap: 48px;
+        padding-bottom: 48px;
     }
     .package-card {
         display: flex;
@@ -233,6 +244,71 @@ img {
         align-self: stretch;
         background-color: #d1d1d1;
         margin: 0 auto;
+    }
+
+    .retainer-item {
+        border-bottom: 1px solid #d1d1d1;
+        width: 90%;
+        margin: 0 auto;
+
+        &.active {
+            background-color: #e0e0e0;
+            padding-bottom: 48px;
+        }
+
+        .retainer-button {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 24px 0;
+            
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-family: var(--ff-heading);
+            font-weight: 450;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #e0e0e0;
+            }
+        }
+            &.active .retainer-block {
+                max-height: 900px;
+                padding: 0 0 0 48px;
+            }
+        
+        .retainer-block {
+            max-height: 0;
+            margin: 0 auto;
+            overflow: hidden;
+            transition: max-height 0.35s ease-out, padding 0.35s ease-out, background-color 0.2s ease;
+            padding: 0 0 0 48px;
+            background-color: #e0e0e0;
+
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+
+            font-size: var(--fs-p);
+
+            .retainer-group {
+                ul {
+                    gap: 6px;
+                    list-style-type: disc;
+                    padding-left: 48px;
+                }
+                li {
+                    max-width: 80%;
+                    margin: 0 auto 0 0;
+
+                    a {
+                        color: inherit;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -418,16 +494,6 @@ img {
             filter: brightness(80%);
         }
     }
-}
-
-#retainer-modal {
-    width: 70vw;
-    height: 70vh;
-
-    &::backdrop {
-        background-color: rgba(0, 0, 0, 0.65);
-    }
-
 }
 
 /* INDEX.HTML END */
