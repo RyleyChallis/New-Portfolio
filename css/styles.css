@@ -507,7 +507,7 @@ img {
         }
 
         &:first-child.active {
-            padding-bottom: 24px;
+            padding-bottom: 22px;
         }
 
         &.active {
@@ -516,6 +516,7 @@ img {
 
         &.active .faq-answer {
             min-height: 75px;
+            padding-bottom: 2px;
         }
     }
 }
