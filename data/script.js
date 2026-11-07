@@ -29,3 +29,30 @@ retainerItem.forEach(item => {
         item.classList.toggle('active');
     });
 });
+
+document.addEventListener('click', () => {
+    const openBtn = document.getElementById('open-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+    openBtn.addEventListener('click', () => {
+        sidebar.classList.add('active');
+        document.body.classList.add('no-scroll');
+        document.documentElement.classList.add('no-scroll');
+        sidebarOverlay.style.display = "block";
+    })
+    closeBtn.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+        document.documentElement.classList.remove('no-scroll');
+        sidebarOverlay.style.display = "none";
+    })
+
+    sidebarOverlay.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+        document.documentElement.classList.remove('no-scroll');
+        sidebarOverlay.style.display = "none";
+    })
+})

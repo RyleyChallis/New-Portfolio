@@ -34,20 +34,21 @@ nav {
                     color: var(--black);
                 }
             }
-            button {
-                display: none;
-                background-color: transparent;
-                border: none;
-                font-size: var(--fs-h3);
-            }
         }
+    }
+    button {
+        display: none;
+        background-color: transparent;
+        border: none;
+        font-size: var(--fs-h3);
+        line-height: 1;
     }
 }
 
 #sidebar {
     display: none;
-    transform: translateX(100%);
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); /* Smooth easing curve */
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), display 0.2 ease;
 }
 
 #sidebarOverlay {
@@ -70,7 +71,7 @@ nav {
     height: 100vh;
     width: 100%;
     position: absolute;
-    right: 0;
+    left: 0;
     z-index: 9999;
 
     background-color: var(--white);
@@ -79,9 +80,8 @@ nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 80%;
-        margin: 0 auto;
-        padding: 5vh 0;
+        max-width: 40%;
+        padding: 5vh 12px;
 
         button {
             background-color: transparent;
@@ -94,12 +94,12 @@ nav {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); /* Moves the block perfectly to the center */
+        transform: translate(-50%, -50%);
         width: 100%;
-        text-align: center;
+        text-align: left;
         list-style: none;
-        padding: 0;
         margin: 0;
+        padding-left: 24px;
         text-transform: uppercase;
 
         a {

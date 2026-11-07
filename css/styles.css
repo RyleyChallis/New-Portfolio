@@ -183,7 +183,7 @@ img {
         }
 
         p {
-            max-width: clamp(65%, 67.5vw, 70%);
+            max-width: clamp(70%, 72.5vw, 95%);
 
             a {
                 color: inherit;
