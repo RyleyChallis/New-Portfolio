@@ -91,6 +91,7 @@ nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
         max-width: 40%;
         padding: 5vh 12px;
         gap: 12px;
@@ -100,6 +101,7 @@ nav {
             border: none;
             font-size: var(--fs-h3);
             color: var(--grey);
+            flex-shrink: 0;
         }
     }
     .sidebar-links {
