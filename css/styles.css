@@ -356,8 +356,8 @@ img {
 
 #selected {
     min-height: auto;
-    padding-bottom: 75px;
-    
+    padding-bottom: 48px;
+        
     .container {
         justify-content: flex-start;
         margin-right: auto;
@@ -382,7 +382,7 @@ img {
                     display: flex;
                     flex-direction: column;
 
-                    &:last-child a {
+                    a.desktop-only {
                         margin-top: 24px;
                     }
                 }
@@ -395,9 +395,6 @@ img {
                     border-radius: 4px;
                     box-shadow: 3px 2px 25px color-mix(in srgb, var(--black) 20%, transparent);
                 }
-            }
-            a.mobile-only {
-                display: none;
             }
         }
     }

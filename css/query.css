@@ -1,3 +1,9 @@
+@media (min-width: 1250px) {
+    a.mobile-only {
+        display: none;
+    }
+}
+
 @media (max-width: 1250px) {
     #packages .row-container,
     #selected .row-container {
@@ -6,7 +12,9 @@
     }
 
     #selected .selected-image img {
-        max-width: 100% !important;
+        max-width: 80% !important; 
+        display: flex;
+        margin: 0 auto;
     }
 
     #packages .package-card {
@@ -20,16 +28,16 @@
         margin: 40px 0;
     }
     #selected {
-        a {
-        .mobile-only {
+        a.mobile-only {
             display: block;
+            margin: 0 auto;
         }
-        .desktop-only {
+        a.desktop-only {
             display: none;
         }
     }
-    }
 }
+
 
 @media (max-width: 863px) {
     footer {
@@ -42,6 +50,9 @@
 }
 
 @media (max-width: 768px) {
+    h2 {
+        text-align: center;
+    }
     nav {
         padding-right: 5%;
         .nav-links li a {
@@ -63,6 +74,7 @@
         flex-direction: column;
         width: 100%;
         align-items: center;
+        text-align: center;
 
         .comparison-card {
             width: 90% !important;
