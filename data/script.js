@@ -40,19 +40,20 @@ document.addEventListener('click', () => {
         sidebar.classList.add('active');
         document.body.classList.add('no-scroll');
         document.documentElement.classList.add('no-scroll');
-        sidebarOverlay.style.display = "block";
+        sidebarOverlay.classList.add('active');
     })
     closeBtn.addEventListener('click', () => {
         sidebar.classList.remove('active');
         document.body.classList.remove('no-scroll');
         document.documentElement.classList.remove('no-scroll');
-        sidebarOverlay.style.display = "none";
+        sidebarOverlay.classList.remove('active');
     })
 
     sidebarOverlay.addEventListener('click', () => {
         sidebar.classList.remove('active');
         document.body.classList.remove('no-scroll');
         document.documentElement.classList.remove('no-scroll');
-        sidebarOverlay.style.display = "none";
+        sidebarOverlay.style.visibility = "hidden";
+        sidebarOverlay.classList.remove('active');
     })
 })
