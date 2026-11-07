@@ -19,6 +19,16 @@
         align-self: auto;
         margin: 40px 0;
     }
+    #selected {
+        a {
+        .mobile-only {
+            display: block;
+        }
+        .desktop-only {
+            display: none;
+        }
+    }
+    }
 }
 
 @media (max-width: 863px) {

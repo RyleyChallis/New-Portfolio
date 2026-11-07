@@ -148,11 +148,12 @@ img {
     --fs-h2: clamp(1.8rem, 4.5vw, 2rem);
     --fs-h3: clamp(1.155rem, 2.45vw, 1.35rem);
     --fs-h4: clamp(1rem, 2.15vw, 1.15rem);
-    --fs-p: clamp(0.8rem, 2vw, 0.9rem);
+    --fs-p: clamp(0.9rem, 2vw, 0.95rem);
     --fs-btn: clamp(0.7rem, 1vw, 0.8rem);
 
     --ff-heading: 'Playfair Display', serif;
     --ff-body: 'Lato', sans-serif;
+    interpolate-size: allow-keywords;
 }
 
 ::selection {
@@ -210,6 +211,47 @@ img {
             }
         }
     }
+}
+
+#trust {
+  display: flex;
+  overflow: hidden;
+  min-height: 10vh;
+  background-color: var(--black);
+  width: 100%;
+
+  .trust-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 17s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  .marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding-right: 48px;
+    flex-shrink: 0;
+
+    h2 {
+      color: var(--white);
+      font-weight: 500;
+      height: fit-content;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 #packages {
@@ -349,10 +391,13 @@ img {
             .selected-image {
                 img {
                     aspect-ratio: 16 / 9;
-                    max-width: 650px;
+                    max-width: 550px;
                     border-radius: 4px;
                     box-shadow: 3px 2px 25px color-mix(in srgb, var(--black) 20%, transparent);
                 }
+            }
+            a.mobile-only {
+                display: none;
             }
         }
     }
@@ -443,7 +488,7 @@ img {
             max-height: 0;
             margin: 0 auto;
             overflow: hidden;
-            transition: max-height 0.35s ease-out, padding 0.35s ease-out, background-color 0.2s ease;
+            transition: min-height 0.3s ease-out, padding 0.3s ease-out, background-color 0.2s ease;
             padding: 0;
             text-align: center;
             background-color: #e0e0e0;
@@ -461,14 +506,16 @@ img {
             }
         }
 
+        &:first-child.active {
+            padding-bottom: 24px;
+        }
+
         &.active {
             background-color: #e0e0e0;
         }
 
         &.active .faq-answer {
-            display: block;
-            max-height: 200px;
-            padding-bottom: 1rem;
+            min-height: 75px;
         }
     }
 }
