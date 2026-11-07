@@ -46,11 +46,11 @@ nav {
 }
 
 #sidebar {
-  position: fixed; /* Takes it completely out of the document flow */
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
-  width: 70vw; /* Or your desired sidebar width */
+  width: 80vw;
   transform: translateX(-100%);
   visibility: hidden;
   pointer-events: none;
@@ -99,7 +99,7 @@ nav {
         button {
             background-color: transparent;
             border: none;
-            font-size: var(--fs-h3);
+            font-size: var(--fs-h2);
             color: var(--grey);
             flex-shrink: 0;
         }
