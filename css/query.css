@@ -1,7 +1,12 @@
 @media (max-width: 1250px) {
-    #packages .row-container {
+    #packages .row-container,
+    #selected .row-container {
         flex-direction: column;
         gap: 48px;
+    }
+
+    #selected .selected-image img {
+        max-width: 100% !important;
     }
 
     #packages .package-card {
@@ -16,6 +21,16 @@
     }
 }
 
+@media (max-width: 863px) {
+    footer {
+        min-height: 450px;
+    }
+    footer .row-container {
+        flex-direction: column;
+        gap: 48px;
+    }
+}
+
 @media (max-width: 768px) {
     nav {
         padding-right: 5%;
@@ -26,9 +41,21 @@
             display: block;
         }
     }
+    footer .footer-bottom {
+        flex-direction: column;
+    }
     #hero {
         .hero-stats {
             visibility: hidden;
+        }
+    }
+    #comparison .row-container {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+        .comparison-card {
+            width: 90% !important;
         }
     }
 }
